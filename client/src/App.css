@@ -2,17 +2,17 @@ a {
   text-decoration: none;
 }
 a:link {
-  color: rgb(255, 200, 0);
+  color: rgb(255, 182, 193);
 }
 
 /* visited link */
 a:visited {
-  color: green;
+  color: rgb(210, 180, 140);
 }
 
 /* mouse over link */
 a:hover {
-  color: hotpink;
+  color: rgb(255, 105, 180);
 }
 
 .login {
@@ -23,17 +23,13 @@ a:hover {
   border-style: solid;
   border-width: thin;
   font-size: 24px;
-  padding-left: 50px;
-  padding-right: 50px;
-  padding-bottom: 10px;
-  padding-top: 10px;
-  background-color: rgb(252, 252, 252);
+  padding: 10px 50px;
+  background-color: rgb(255, 245, 238);
   border-radius: 10px;
   width: 100%;
   height: 100%;
-  border-color: #a6d49f;
-  margin-top: 10px;
-  margin-bottom: 10px;
+  border-color: rgb(255, 182, 193);
+  margin: 10px 0;
 }
 
 .login-form input {
@@ -42,26 +38,23 @@ a:hover {
 .smalltext {
   font-size: 14px;
   font-weight: bold;
-  color: #522a27;
+  color: rgb(199, 21, 133);
 }
 
 .columndiv1 {
-  border-color: #a6d49f;
+  border-color: rgb(255, 182, 193);
   font-size: xx-large;
-  background-color: rgb(252, 252, 252);
+  background-color: rgb(255, 245, 238);
   height: auto;
   display: flex;
   align-items: center;
   justify-content: center;
 }
 .columndiv2 {
-  border-color: rgb(182, 179, 176);
+  border-color: rgb(210, 180, 140);
   font-size: xx-large;
   height: auto;
   padding: 20px;
-  /*   background-image: url("http://localhost:3000/image1.jpg");
-  background-size: cover;
-  background-repeat: no-repeat; */
 }
 
 .loginImage {
@@ -70,10 +63,10 @@ a:hover {
 }
 .appTitle {
   text-align: center;
-  color: #c73e1d;
+  color: rgb(199, 21, 133);
 }
 .formrow {
-  background-color: #522a27;
+  background-color: rgb(255, 228, 225);
   padding: 50px;
   display: flex;
   align-items: center;
@@ -92,25 +85,24 @@ a:hover {
   text-align: center;
   padding: 10px;
   width: 100%;
-  background-color: #c59849;
+  background-color: rgb(255, 182, 193);
   border-style: none;
 }
 body {
   font-family: "Roboto", sans-serif;
-  margin: 10;
-  margin-left: 10px;
+  margin: 10px;
 }
 .navigation {
-  background-color: #9cb380;
+  background-color: rgb(255, 228, 225);
   height: 75px;
   font-weight: bolder;
-  color: #522a27;
+  color: rgb(199, 21, 133);
 }
 .footer {
   display: flex;
-  background-color: #9cb380;
+  background-color: rgb(255, 245, 238);
   height: 100px;
-  color: #522a27;
+  color: rgb(199, 21, 133);
   justify-content: center;
   align-items: center;
   font-weight: bolder;
@@ -147,13 +139,13 @@ body {
   border-style: solid;
   border-width: thin;
   margin-top: 10px;
-  border-color: #a6d49f;
+  border-color: rgb(255, 182, 193);
   text-align: center;
 }
 .inputPost {
   margin-right: 10px;
   width: 80%;
-  border-color: #522a27;
+  border-color: rgb(199, 21, 133);
 }
 .input-button-container {
   display: flex;
@@ -161,7 +153,7 @@ body {
   justify-content: center;
 }
 .postButton {
-  background-color: #522a27;
+  background-color: rgb(199, 21, 133);
 }
 .dept {
   display: flex;
@@ -195,7 +187,7 @@ body {
 }
 .postedBy {
   padding: 10px;
-  background-color: rgb(236, 238, 236);
+  background-color: rgb(255, 245, 238);
   border-radius: 10px;
 }
 .postByName {
@@ -216,31 +208,31 @@ body {
 }
 
 .error {
-  color: red;
+  color: rgb(199, 21, 133);
   font-size: small;
 }
 .header {
   display: flex;
-  align-items: center; /* Vertically align items */
+  align-items: center;
   padding: 10px;
-  background-color: #f8f9fa;
+  background-color: rgb(255, 245, 238);
 }
 
 .nav {
   display: flex;
-  align-items: center; /* Vertically align items */
+  align-items: center;
 }
 
 .logo {
-  height: 50px; /* Adjust the logo size as needed */
+  height: 50px;
 }
 
 .nav a {
-  text-decoration: none; /* Remove underline */
-  color: #000; /* Set text color */
-  margin: 0 15px; /* Add spacing between links */
+  text-decoration: none;
+  color: rgb(199, 21, 133);
+  margin: 0 15px;
 }
 
 .nav a:hover {
-  color: #007bff; /* Change color on hover (optional) */
+  color: rgb(255, 105, 180);
 }
