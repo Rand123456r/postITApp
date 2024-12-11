@@ -230,6 +230,8 @@ app.put(
       // Update user's name
       userToUpdate.name = name;
 
+      if (userType) userToUpdate.userType = userType;
+
       // Hash the new password and update if it has changed
       if (password !== userToUpdate.password) {
         const hashedPassword = await bcrypt.hash(password, 10);
@@ -257,11 +259,48 @@ app.get("/getUsers", async (req, res) => {
 
     const users = await UserModel.find({}).sort({ name: 1 });
 
-    const userPost = await UserModel.countDocuments({});
+    const userCount = await UserModel.countDocuments({});
 
-    res.send({ users: users, count: userPost });
+    res.send({ users: users, count: userCount });
   } catch (err) {
     console.error(err);
+
+    res.status(500).json({ error: "An error occurred" });
+  }
+});
+
+app.delete("/deleteUser/:id/", async (req, res) => {
+  const id = req.params.id;
+
+  try {
+    const user = await UserModel.findByIdAndDelete(id);
+
+    if (!user) {
+      return res.status(404).json({ error: "User not found" });
+    }
+
+    res.status(200).json({ id: id, msg: "User deleted successfully" });
+  } catch (error) {
+    console.error(error);
+    res
+      .status(500)
+      .json({ error: "An error occurred while deleting the user" });
+  }
+});
+
+//GET API - for retrieving a single user
+
+app.get("/getUser/:id", async (req, res) => {
+  const id = req.params.id;
+
+  try {
+    // Find the user by _id
+
+    const user = await UserModel.findById(id);
+
+    res.send({ user: user });
+  } catch (error) {
+    console.error(error);
 
     res.status(500).json({ error: "An error occurred" });
   }

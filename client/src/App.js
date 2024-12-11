@@ -10,6 +10,7 @@ import Profile from "./Components/Profile";
 import Register from "./Components/Register";
 import { useSelector } from "react-redux";
 import Manage from "./Components/Manage";
+import ManageProfile from "./Components/ManageProfile";
 
 const App = () => {
   const email = useSelector((state) => state.users.user.email);
@@ -31,6 +32,7 @@ const App = () => {
             <Route path="/profile" element={<Profile />}></Route>
             <Route path="/register" element={<Register />}></Route>
             <Route path="/manage" element={<Manage />}></Route>
+            <Route path="/manageProfile" element={<ManageProfile />}></Route>
           </Routes>
         </Row>
         <Row>

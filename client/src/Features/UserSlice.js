@@ -102,6 +102,7 @@ export const userSlice = createSlice({
   name: "users", //name of the state
   initialState, // initial value of the state
   reducers: {
+    reset: () => initialState,
     addUser: (state, action) => {
       //state is the current value of the state, action is triggered outside the reducer and provides a value as payload
       state.value.push(action.payload); //the payload is the value coming from the component, add the payload to the state
@@ -172,6 +173,6 @@ export const userSlice = createSlice({
   },
 });
 
-export const { addUser, deleteUser, updateUser } = userSlice.actions; //export the function
+export const { addUser, deleteUser, updateUser, reset } = userSlice.actions; //export the function
 
 export default userSlice.reducer;

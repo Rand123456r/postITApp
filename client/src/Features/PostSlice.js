@@ -51,7 +51,9 @@ export const likePost = createAsyncThunk("posts/likePost", async (postData) => {
 const postSlice = createSlice({
   name: "posts",
   initialState: initialState,
-  reducers: {},
+  reducers: {
+    reset: () => initialState,
+  },
   extraReducers: (builder) => {
     builder
       .addCase(savePost.pending, (state) => {
@@ -102,4 +104,5 @@ const postSlice = createSlice({
   },
 });
 
+export const { reset } = postSlice.actions;
 export default postSlice.reducer;
